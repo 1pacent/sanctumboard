@@ -1,0 +1,12 @@
+services:
+  sanctumboard-www:
+    build: .
+    image: sanctumboard-www:latest
+    container_name: sanctumboard-www
+    restart: unless-stopped
+    networks:
+      - sanctum_web
+
+networks:
+  sanctum_web:
+    name: sanctum_web
