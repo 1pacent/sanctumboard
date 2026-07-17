@@ -3,499 +3,294 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SanctumBoard — AI-Powered Board Governance</title>
-  <meta name="description" content="SanctumBoard gives your board AI-powered governance support that runs entirely on your infrastructure. Your data never leaves your environment." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <title>SanctumBoard — Governance, with proof</title>
+  <meta name="description" content="Employ Pam, an AI company secretary who does the governance work. You seal every decision. Your board gains something no portal offers: clarity you can prove — to your funder, your insurer, your regulator." />
+  <meta property="og:title" content="SanctumBoard — Governance, with proof" />
+  <meta property="og:description" content="An AI company secretary does the work. Named humans seal every decision. Everything leaves verifiable proof." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <!-- NAV -->
-<nav class="nav" id="nav">
+<nav class="nav">
   <div class="container nav__inner">
     <a href="#" class="nav__logo">
-      <svg class="nav__shield" viewBox="0 0 24 24" fill="none">
-        <path d="M12 2L3 7v6c0 5.25 3.75 10.15 9 11.25C17.25 23.15 21 18.25 21 13V7L12 2z" fill="currentColor"/>
-        <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <span>SanctumBoard<span class="logo-dot">.com</span></span>
+      <span class="nav__mark">S</span>
+      <span class="nav__word">Sanctum<em>Board</em></span>
     </a>
     <ul class="nav__links">
-      <li><a href="#security">Security</a></li>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#industries">Industries</a></li>
-      <li><a href="#how">How It Works</a></li>
+      <li><a href="#pam">The platform</a></li>
+      <li><a href="#proof">Proof</a></li>
+      <li><a href="#passport">Passport</a></li>
+      <li><a href="#different">Why SanctumBoard</a></li>
+      <li><a href="#pricing">Pricing</a></li>
     </ul>
-    <a href="#demo" class="btn btn--amber btn--sm">Request Demo</a>
-    <button class="nav__burger" aria-label="Menu" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="nav__mobile" id="navMobile">
-    <a href="#security" onclick="toggleMenu()">Security</a>
-    <a href="#features" onclick="toggleMenu()">Features</a>
-    <a href="#industries" onclick="toggleMenu()">Industries</a>
-    <a href="#how" onclick="toggleMenu()">How It Works</a>
-    <a href="#demo" class="btn btn--amber" onclick="toggleMenu()">Request Demo</a>
+    <a class="btn btn--solid btn--small" href="https://demo.sanctumboard.com">See it live</a>
   </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero__bg-grid"></div>
-  <div class="container hero__inner">
-    <div class="hero__badge">
-      <span class="badge-dot"></span>
-      Trusted by boards in aged care, NFP and corporate governance
-    </div>
-    <h1 class="hero__headline">
-      Board Governance<br/>
-      <em>Powered by AI<br/>You Can Trust</em>
-    </h1>
-    <p class="hero__sub">
-      SanctumBoard delivers intelligent governance support that runs entirely within your infrastructure. Your confidential board data — papers, votes, minutes, risk registers — never touches a third-party AI provider.
+<header class="hero">
+  <div class="container">
+    <p class="eyebrow">For chairs, directors, secretaries and executives</p>
+    <h1>Clarity, for every board.</h1>
+    <p class="hero__lead">
+      SanctumBoard gives your board an AI company secretary — <strong>Pam</strong> — who prepares the meetings,
+      keeps the registers, watches your obligations and hands you the decisions. You approve with a seal.
+      And everything, from her first draft to your final signature, leaves <strong>proof you can share</strong>.
     </p>
-    <div class="hero__cta">
-      <a href="#demo" class="btn btn--amber btn--lg">Book a Demo</a>
-      <a href="#security" class="btn btn--ghost btn--lg">Why It's Secure →</a>
+    <div class="hero__ctas">
+      <a class="btn btn--solid" href="https://demo.sanctumboard.com">See it live →</a>
+      <a class="btn btn--ghost" href="https://assess.sanctumboard.com" target="_blank" rel="noreferrer">Take the AI governance assessment ↗</a>
     </div>
-    <div class="hero__trust">
-      <div class="trust-item">
-        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
-        <span>Private LLM — no OpenAI, no Google</span>
-      </div>
-      <div class="trust-item">
-        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
-        <span>Deployed on your servers</span>
-      </div>
-      <div class="trust-item">
-        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
-        <span>AICD-aligned governance frameworks</span>
-      </div>
-    </div>
-  </div>
-  <div class="hero__scroll-hint">
-    <div class="scroll-dot"></div>
-  </div>
-</section>
+    <p class="hero__promise">Nothing becomes a record without a named human approval — that is the architecture, not a policy.</p>
 
-<!-- SECURITY SECTION -->
-<section class="section section--dark" id="security">
+    <!-- The one-glance product -->
+    <div class="hero__panel" aria-hidden="true">
+      <div class="panel__bar">
+        <span class="panel__dot"></span><span class="panel__brand">SanctumBoard</span>
+        <span class="panel__tabs"><b>Today</b><i>Boardroom</i><i>Board Health</i><i>Obligations</i><i>Passport</i></span>
+      </div>
+      <div class="panel__body">
+        <div class="panel__pam">
+          <p class="pam__name">● Pam</p>
+          <p class="pam__line">Morning. The August pack is ready — one approval below and it goes to the directors tonight.</p>
+        </div>
+        <div class="panel__cards">
+          <div class="card card--seal">
+            <span class="chip chip--seal">Awaiting your seal</span>
+            <p><strong>Publish the August board pack</strong></p>
+            <span class="btnlet">◉ Approve &amp; seal</span>
+          </div>
+          <div class="card">
+            <span class="chip chip--green">All obligations green</span>
+            <p>Next: AGM notice · 41 days <em>· Corporations Act s 249H</em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- THE IDEA -->
+<section class="section" id="pam">
   <div class="container">
-    <div class="section-label">Security by Design</div>
-    <h2 class="section-heading">Your Data Stays<br/>In Your Hands</h2>
-    <p class="section-sub">Every architectural decision in SanctumBoard was made to ensure that sensitive board information never leaves your control. This is not a policy — it is the technical reality.</p>
-
-    <div class="grid grid--4">
-
-      <div class="card card--dark card--glow">
-        <div class="card__icon card__icon--amber">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="11" width="20" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-          </svg>
-        </div>
-        <h3>On-Premises AI</h3>
-        <p>The language model (Gemma 3, running via Ollama) is installed directly on your server. There is no API call to OpenAI, Anthropic, or any external provider. Inference is 100% local.</p>
+    <p class="eyebrow">The platform</p>
+    <h2>One secretary. One seal. One source of proof.</h2>
+    <div class="trio">
+      <div class="trio__item">
+        <span class="trio__glyph trio__glyph--sky">P</span>
+        <h3>Pam does the work</h3>
+        <p>Agendas drafted, reports commissioned and chased, packs compiled and distributed, minutes assembled before the
+        room empties, actions tracked, regulators watched. She remembers your board — what each director cares about,
+        what was decided and why — and she works every day, not just before meetings.</p>
       </div>
-
-      <div class="card card--dark card--glow">
-        <div class="card__icon card__icon--amber">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2L3 7v6c0 5.25 3.75 10.15 9 11.25C17.25 23.15 21 18.25 21 13V7L12 2z"/>
-          </svg>
-        </div>
-        <h3>Isolated Infrastructure</h3>
-        <p>Each organisation runs in its own containerised stack — separate database, separate LLM context, separate network segment. A vulnerability in one tenant cannot cascade to another.</p>
+      <div class="trio__item">
+        <span class="trio__glyph trio__glyph--seal">◉</span>
+        <h3>You hold the seal</h3>
+        <p>Pam proposes; a named human approves; <em>then</em> the record exists. Every consequential act — an agenda, a
+        resolution, the minutes — waits for a seal with a name and a time on it. The board keeps its authority and gains
+        a perfect account of exercising it.</p>
       </div>
-
-      <div class="card card--dark card--glow">
-        <div class="card__icon card__icon--amber">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="8" r="4"/><path d="M3 20c0-4 4-7 9-7s9 3 9 7"/>
-            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-          </svg>
-        </div>
-        <h3>Role-Based Access</h3>
-        <p>Directors, Secretaries and Chairs see only what their role authorises. Board papers, risk registers, and strategic documents are access-controlled at the row level — not just the page level.</p>
-      </div>
-
-      <div class="card card--dark card--glow">
-        <div class="card__icon card__icon--amber">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-            <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/>
-          </svg>
-        </div>
-        <h3>Full Audit Trail</h3>
-        <p>Every AI interaction, document access, vote cast and action recorded is timestamped and attributed to an individual director. You have a verifiable record for regulators, insurers, and legal review.</p>
-      </div>
-
-    </div>
-
-    <div class="security-callout">
-      <div class="security-callout__icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          <line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
-        </svg>
-      </div>
-      <div>
-        <strong>Board papers contain your most sensitive strategic and financial information.</strong>
-        Sending them to a public AI API creates legal, regulatory, and reputational risk. SanctumBoard was built from the ground up to eliminate this risk — not manage it.
+      <div class="trio__item">
+        <span class="trio__glyph trio__glyph--trust">🔗</span>
+        <h3>Everything leaves proof</h3>
+        <p>Every automated step writes a receipt. Every seal joins an append-only, hash-chained ledger, checkpointed
+        daily. Every claim in the product can be pulled open like a thread — from the green tick, back through the work,
+        to the law that required it.</p>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- FEATURES -->
-<section class="section section--light" id="features">
+<!-- FOUR ROOMS -->
+<section class="section section--tint">
   <div class="container">
-    <div class="section-label">Platform Capabilities</div>
-    <h2 class="section-heading">Everything a Modern<br/>Board Needs</h2>
-    <p class="section-sub">From board pack assembly to post-meeting action follow-up, SanctumBoard supports the full governance lifecycle — with an AI assistant that understands your organisation's context.</p>
-
-    <div class="features-grid">
-
-      <div class="feature-card">
-        <div class="feature-card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-          </svg>
-        </div>
-        <h3>Smart Board Pack</h3>
-        <p>Digital board papers with version control. Directors annotate, highlight and query documents with the AI — all within the secure environment.</p>
+    <p class="eyebrow">A calm place to govern</p>
+    <h2>Four rooms. Nothing to learn.</h2>
+    <p class="section__lead">No module maze. Pam sits beside you in every room, and each room answers a single question.</p>
+    <div class="rooms">
+      <div class="room">
+        <h3>Today</h3>
+        <p class="room__q">“What needs me?”</p>
+        <p>A short queue of moments that need a human — approve, vote, read, sign — and Pam’s account of what she’s done,
+        every line an audit entry. The empty state is the goal: <em>nothing needs you, and here’s the proof.</em></p>
       </div>
-
-      <div class="feature-card">
-        <div class="feature-card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/>
-            <line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
-          </svg>
-        </div>
-        <h3>Meeting Management</h3>
-        <p>Agenda builder, quorum tracking, conflict-of-interest declarations, and automated minute drafting with action item extraction.</p>
+      <div class="room">
+        <h3>Boardroom</h3>
+        <p class="room__q">“Where is the meeting up to?”</p>
+        <p>Each meeting is one living page — forming, ready, in session, settling, sealed — with the pack read in place,
+        votes cast in place, and minutes drafted the moment the meeting closes.</p>
       </div>
-
-      <div class="feature-card">
-        <div class="feature-card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 11 12 14 22 4"/>
-            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-          </svg>
-        </div>
-        <h3>Circular Resolutions & Votes</h3>
-        <p>Structured voting with For / Against / Abstain. Full paper trail per director per resolution. Supports both in-meeting and out-of-session decisions.</p>
+      <div class="room">
+        <h3>Board Health</h3>
+        <p class="room__q">“Are we on top of it?”</p>
+        <p>One score and a bar for every Act and standard you answer to. Green means <em>evidenced</em> — never asserted.</p>
       </div>
-
-      <div class="feature-card">
-        <div class="feature-card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            <line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
-          </svg>
-        </div>
-        <h3>Risk Register</h3>
-        <p>5×5 risk heatmap with likelihood and consequence ratings. AI can identify emerging risks from board papers and flag gaps against your risk appetite.</p>
+      <div class="room">
+        <h3>Obligations</h3>
+        <p class="room__q">“What do we owe, and when?”</p>
+        <p>Your duty map, generated from your country, state and industry — every duty dated and cited to the instrument
+        that imposes it, with a thread of evidence growing behind it.</p>
       </div>
-
-      <div class="feature-card">
-        <div class="feature-card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-          </svg>
-        </div>
-        <h3>Board AI Assistant</h3>
-        <p>Ask natural-language questions about board papers, legislation, or governance obligations. The AI cites sources, labels facts vs. inferences, and reminds the board it retains decision authority.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/>
-            <line x1="6" y1="20" x2="6" y2="14"/>
-          </svg>
-        </div>
-        <h3>Engagement Analytics</h3>
-        <p>Chair and Secretary dashboards showing director engagement rates, action completion, and pack read rates — enabling the Chair to follow up before the meeting, not after.</p>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- INDUSTRIES -->
-<section class="section section--dark" id="industries">
+<!-- THE THREAD -->
+<section class="section" id="proof">
+  <div class="container section--split">
+    <div>
+      <p class="eyebrow">Traceability</p>
+      <h2>Pull any claim like a thread.</h2>
+      <p class="section__lead">Behind every green tick in SanctumBoard is a chain you can open — and so can your auditor.</p>
+      <p class="section__body">Most software asks to be taken at its word. SanctumBoard shows its working: the law, the duty it
+      creates, the receipted run that did the work, the draft Pam wrote, the named seal that made it real, and the hash
+      that locks it into the ledger. Clarity, all the way down.</p>
+    </div>
+    <div class="thread" aria-hidden="true">
+      <div class="thread__node"><span class="thread__glyph g--trust">§</span><div><b>Corporations Act 2001 s 347A</b><br/>the instrument, versioned &amp; linked</div></div>
+      <div class="thread__node"><span class="thread__glyph g--sky">📅</span><div><b>Annual solvency resolution</b><br/>the duty — due 31 August</div></div>
+      <div class="thread__node"><span class="thread__glyph g--plain">⚙</span><div><b>Receipt №4821</b><br/>Pam drafted the resolution — recorded</div></div>
+      <div class="thread__node"><span class="thread__glyph g--seal">◉</span><div><b>Sealed — M. Chair, 14 Aug, 09:12</b><br/>the named human approval</div></div>
+      <div class="thread__node"><span class="thread__glyph g--green">✓</span><div><b>Evidenced</b><br/>#a41f09c2… <span class="ok">verified</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PASSPORT -->
+<section class="section section--navy" id="passport">
   <div class="container">
-    <div class="section-label">Industry-Specific Intelligence</div>
-    <h2 class="section-heading">Governance Support<br/>Built for Your Sector</h2>
-    <p class="section-sub">Generic AI does not understand aged care quality standards or AICD fiduciary obligations. SanctumBoard's AI is grounded in the regulatory and governance frameworks that govern your organisation.</p>
-
-    <div class="grid grid--3">
-
-      <div class="industry-card">
-        <div class="industry-card__header">
-          <div class="industry-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-            </svg>
-          </div>
-          <h3>Aged Care</h3>
-        </div>
-        <p>The Aged Care Act 1997 and its 2024 reforms impose specific obligations on approved provider boards. SanctumBoard's AI understands the Aged Care Quality Standards, the role of the Aged Care Quality and Safety Commission, and the board's duty to ensure safe, person-centred care.</p>
-        <ul class="industry-list">
-          <li>Aged Care Quality and Safety Commission (ACQSC) framework</li>
-          <li>Eight Aged Care Quality Standards compliance tracking</li>
-          <li>Serious Incident Response Scheme (SIRS) obligations</li>
-          <li>Aged Care (Transitional Provisions) Act reform readiness</li>
-          <li>Statement of Rights and person-centred governance</li>
-        </ul>
+    <p class="eyebrow eyebrow--light">The Governance Passport</p>
+    <h2>Share proof, not promises.</h2>
+    <p class="section__lead section__lead--light">
+      When your funder, insurer, bank or regulator asks about governance, send one link. They see your adherence —
+      and verify it for themselves against your daily-anchored ledger. No data room. No questionnaire. No taking
+      anyone’s word for it.
+    </p>
+    <div class="passport" aria-hidden="true">
+      <div class="passport__head">
+        <span>◉ Governance Passport — Northgate Community Care Ltd</span>
+        <span class="chip chip--green">Ledger integrity verified — 4,218 entries, chain intact</span>
       </div>
-
-      <div class="industry-card industry-card--featured">
-        <div class="industry-card__header">
-          <div class="industry-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="18" height="18" rx="2"/>
-              <path d="M9 9h1m4 0h1M9 13h6M9 17h6"/>
-            </svg>
-          </div>
-          <h3>NFP &amp; Charity Boards</h3>
-          <div class="featured-badge">Most Common</div>
-        </div>
-        <p>Not-for-profit boards operate under the ACNC Act, state-based associations legislation, and heightened public scrutiny. AI assistance that is tuned to mission-driven governance obligations — not corporate profit maximisation.</p>
-        <ul class="industry-list">
-          <li>ACNC governance standards and reporting obligations</li>
-          <li>Duty of care and duty of diligence for NFP directors</li>
-          <li>Related-party transaction management</li>
-          <li>Charity registration and charitable purpose compliance</li>
-          <li>Grant acquittals and program governance oversight</li>
-        </ul>
+      <div class="passport__rows">
+        <div><span>Corporations Act 2001</span><span class="bar"><i style="width:88%"></i></span><b>12/13 evidenced</b></div>
+        <div><span>ACNC Governance Standards</span><span class="bar"><i style="width:100%"></i></span><b>6/6 evidenced</b></div>
+        <div><span>Aged Care Quality Standards</span><span class="bar"><i style="width:76%"></i></span><b>19/24 evidenced</b></div>
       </div>
-
-      <div class="industry-card">
-        <div class="industry-card__header">
-          <div class="industry-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-              <polyline points="9 22 9 12 15 12 15 22"/>
-            </svg>
-          </div>
-          <h3>Corporate &amp; ASX</h3>
-        </div>
-        <p>For private and publicly listed companies, SanctumBoard aligns to the AICD Code of Conduct for Directors, ASX Corporate Governance Principles and Recommendations, and Corporations Act 2001 obligations.</p>
-        <ul class="industry-list">
-          <li>AICD Code of Conduct for Directors</li>
-          <li>ASX CGC Principles and Recommendations (4th edition)</li>
-          <li>Corporations Act 2001 — ss 180–184 director duties</li>
-          <li>Board committee oversight (Audit, Risk, Remuneration)</li>
-          <li>Modern Slavery Act reporting and supply chain governance</li>
-        </ul>
-      </div>
-
+      <p class="passport__foot">Scoped · revocable · verifications logged — you see who checked, and when.</p>
     </div>
-
-    <div class="aicd-callout">
-      <div class="aicd-callout__inner">
-        <div class="aicd-callout__text">
-          <h3>Aligned to AICD Governance Principles</h3>
-          <p>The Australian Institute of Company Directors defines the gold standard for director conduct in Australia. SanctumBoard's AI is grounded in AICD frameworks — covering director duties, board composition, oversight of management, and accountability to stakeholders. The AI always reminds directors that it provides evidence-based support, not a substitute for director judgment.</p>
-        </div>
-        <div class="aicd-callout__pillars">
-          <div class="pillar">
-            <span class="pillar__num">01</span>
-            <span>Director Duties &amp; Obligations</span>
-          </div>
-          <div class="pillar">
-            <span class="pillar__num">02</span>
-            <span>Board Oversight of Strategy</span>
-          </div>
-          <div class="pillar">
-            <span class="pillar__num">03</span>
-            <span>Risk Management &amp; Assurance</span>
-          </div>
-          <div class="pillar">
-            <span class="pillar__num">04</span>
-            <span>Accountability &amp; Disclosure</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <p class="section__note section__note--light">Passports attest to process adherence and evidence integrity — the board always retains decision authority and judgement.</p>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="section section--light" id="how">
+<!-- DIFFERENTIATION -->
+<section class="section" id="different">
   <div class="container">
-    <div class="section-label">Deployment</div>
-    <h2 class="section-heading">Up and Running in<br/>Days, Not Months</h2>
-    <p class="section-sub">SanctumBoard deploys on your existing server infrastructure. No cloud migration, no vendor lock-in, no per-seat SaaS pricing.</p>
-
-    <div class="steps">
-      <div class="step">
-        <div class="step__num">01</div>
-        <div class="step__content">
-          <h3>Provision Your Server</h3>
-          <p>Any modern Linux server — on-premises or your preferred cloud provider. We support dedicated hardware, private cloud (AWS/Azure/GCP VPC), and co-located data centres. Minimum 16GB RAM for the LLM inference engine.</p>
-        </div>
-      </div>
-      <div class="step__connector"></div>
-      <div class="step">
-        <div class="step__num">02</div>
-        <div class="step__content">
-          <h3>We Deploy &amp; Configure</h3>
-          <p>Our team installs the Docker stack — governance platform, private LLM, vector database, and reverse proxy with TLS. We load your organisation's governance documents and configure the AI's system prompt with your regulatory context.</p>
-        </div>
-      </div>
-      <div class="step__connector"></div>
-      <div class="step">
-        <div class="step__num">03</div>
-        <div class="step__content">
-          <h3>Board Onboarding</h3>
-          <p>Directors receive role-based access. A 90-minute onboarding session covers the board pack, AI assistant, and voting workflows. The Secretary gets a dedicated session on meeting management and paper authoring.</p>
-        </div>
-      </div>
+    <p class="eyebrow">Why SanctumBoard</p>
+    <h2>A different kind of board platform.</h2>
+    <p class="section__lead">Board portals organise your documents, and do it well. SanctumBoard is built for what comes next.</p>
+    <div class="compare">
+      <div class="compare__row compare__row--head"><span>Board portals give you</span><span>SanctumBoard gives you</span></div>
+      <div class="compare__row"><span>A secure place to store packs and minutes</span><span><b>A secretary who produces them</b> — drafted, chased, compiled and distributed, with you approving</span></div>
+      <div class="compare__row"><span>AI that summarises documents</span><span><b>AI that runs the cycle</b> — and structurally cannot write a record without your seal</span></div>
+      <div class="compare__row"><span>Generic good-governance templates</span><span><b>Your actual duties</b> — by country, state and industry, cited to the Act and section, kept current</span></div>
+      <div class="compare__row"><span>An audit log, if you export it</span><span><b>A hash-chained ledger, anchored daily</b> — with a thread from every claim to its evidence</span></div>
+      <div class="compare__row"><span>A report you write about governance</span><span><b>A Passport others verify</b> — adherence your funder or insurer can check independently</span></div>
     </div>
-
-    <div class="tech-stack">
-      <div class="tech-stack__label">Powered by open, auditable technology</div>
-      <div class="tech-stack__items">
-        <div class="tech-item">
-          <div class="tech-item__dot"></div>
-          <span>Ollama + Gemma 3</span>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item__dot"></div>
-          <span>PostgreSQL + pgvector</span>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item__dot"></div>
-          <span>Docker + Caddy</span>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item__dot"></div>
-          <span>Next.js 14 App Router</span>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item__dot"></div>
-          <span>n8n Workflow Automation</span>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item__dot"></div>
-          <span>Let's Encrypt TLS</span>
-        </div>
-      </div>
-    </div>
-
+    <p class="section__note">Prefer to work without AI? Every action has a manual path, and boards choose their AI posture function by
+    function. The clarity — and the proof — accrue either way.</p>
   </div>
 </section>
 
-<!-- DEMO CTA -->
-<section class="section cta-section" id="demo">
-  <div class="cta-section__bg"></div>
-  <div class="container cta-section__inner">
-    <div class="section-label section-label--light">Get Started</div>
-    <h2 class="cta-section__heading">Ready to Bring AI<br/>to Your Boardroom?</h2>
-    <p class="cta-section__sub">Book a 45-minute demonstration for your board. We will walk through the platform using a governance scenario relevant to your sector — aged care, NFP, or corporate.</p>
-    <form class="demo-form" onsubmit="handleDemo(event)">
-      <div class="demo-form__row">
-        <input type="text" placeholder="Your name" required />
-        <input type="email" placeholder="Work email" required />
-        <input type="text" placeholder="Organisation" required />
-        <select required>
-          <option value="" disabled selected>Your sector</option>
-          <option>Aged Care</option>
-          <option>Not-for-Profit</option>
-          <option>Corporate / ASX</option>
-          <option>Government</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <button type="submit" class="btn btn--amber btn--lg">Request a Demo</button>
-    </form>
-    <div id="demoSuccess" class="demo-success" style="display:none;">
-      Thank you — we will be in touch within one business day.
+<!-- TRUST FOUNDATIONS -->
+<section class="section section--tint">
+  <div class="container">
+    <p class="eyebrow">Built for trust</p>
+    <h2>Principles you can hold us to.</h2>
+    <div class="grid-6">
+      <div class="tenet"><b>The seal is absolute.</b> AI proposes; named humans approve; only then does a record exist.</div>
+      <div class="tenet"><b>Cite, or stay silent.</b> Every claim Pam makes carries its source — or says plainly that evidence is missing.</div>
+      <div class="tenet"><b>No invisible automation.</b> Every automated run leaves a receipt — including the failures.</div>
+      <div class="tenet"><b>Verifiable by outsiders.</b> The ledger is recomputable and checkpointed daily; you never have to be believed.</div>
+      <div class="tenet"><b>Manual mode is first-class.</b> Turn AI off and SanctumBoard remains a complete, calm governance system.</div>
+      <div class="tenet"><b>Your data, governed.</b> Australian residency, per-board isolation, and memory you can inspect and erase.</div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- PRICING -->
+<section class="section" id="pricing">
+  <div class="container">
+    <p class="eyebrow">Pricing</p>
+    <h2>Employ a secretary, not a seat count.</h2>
+    <p class="section__lead">Every plan includes unlimited board members — you’re employing Pam, not licensing logins.</p>
+    <div class="plans">
+      <div class="plan">
+        <h3>Solo</h3><p class="plan__price">A$49<span>/mo</span></p>
+        <p>For the director who is also the board. Your duty map, your records, your annual cycle — handled.</p>
+      </div>
+      <div class="plan">
+        <h3>Foundations</h3><p class="plan__price">A$99<span>/mo</span></p>
+        <p>The complete governance system, AI off. Records, obligations, threads and proof — on your terms.</p>
+      </div>
+      <div class="plan plan--feature">
+        <h3>AI Secretary</h3><p class="plan__price">A$299<span>/mo</span></p>
+        <p>Employ Pam end-to-end: the full cycle run, receipted, with every decision sealed by you.</p>
+      </div>
+      <div class="plan">
+        <h3>Passport</h3><p class="plan__price">+A$149<span>/mo</span></p>
+        <p>Externally verifiable adherence — share it with funders, insurers, banks and regulators.</p>
+      </div>
+    </div>
+    <p class="section__note">Advisory and accounting firms: run every board you serve from one console — <a href="mailto:hello@sanctumboard.com">talk to us about Fleet</a>.</p>
+  </div>
+</section>
+
+<!-- AI4BOARDS BRIDGE -->
+<section class="section section--bridge">
+  <div class="container bridge">
+    <div>
+      <p class="eyebrow">Start with clarity</p>
+      <h2>Where does your board stand on AI?</h2>
+      <p class="section__body">Our education community, <a href="https://ai4boards.org" target="_blank" rel="noreferrer">AI4Boards</a>, offers a
+      professional AI-governance assessment powered by the SanctumBoard engine — your maturity, your applicable laws and
+      standards, and a board-ready roadmap.</p>
+    </div>
+    <div class="bridge__ctas">
+      <a class="btn btn--solid" href="https://assess.sanctumboard.com" target="_blank" rel="noreferrer">Take the assessment ↗</a>
+      <a class="btn btn--ghost" href="https://assess.sanctumboard.com/professional/sample" target="_blank" rel="noreferrer">See a sample report ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section section--final">
+  <div class="container center">
+    <h2>See your board, clearly.</h2>
+    <p class="section__lead">Fifteen minutes in the live environment says more than any brochure.</p>
+    <a class="btn btn--solid btn--big" href="https://demo.sanctumboard.com">See SanctumBoard live →</a>
+  </div>
+</section>
+
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__brand">
-      <a href="#" class="nav__logo">
-        <svg class="nav__shield" viewBox="0 0 24 24" fill="none">
-          <path d="M12 2L3 7v6c0 5.25 3.75 10.15 9 11.25C17.25 23.15 21 18.25 21 13V7L12 2z" fill="currentColor"/>
-          <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span>SanctumBoard<span class="logo-dot">.com</span></span>
-      </a>
-      <p>AI-powered board governance that keeps your data where it belongs — with you.</p>
+      <span class="nav__mark">S</span> <b>SanctumBoard</b>
+      <p>Governance, with proof.</p>
     </div>
-    <div class="footer__links">
-      <div class="footer__col">
-        <h4>Platform</h4>
-        <a href="#features">Features</a>
-        <a href="#security">Security</a>
-        <a href="#how">Deployment</a>
-        <a href="#demo">Pricing</a>
-      </div>
-      <div class="footer__col">
-        <h4>Industries</h4>
-        <a href="#industries">Aged Care</a>
-        <a href="#industries">Not-for-Profit</a>
-        <a href="#industries">Corporate</a>
-        <a href="#industries">Government</a>
-      </div>
-      <div class="footer__col">
-        <h4>Company</h4>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
-      </div>
-    </div>
+    <ul>
+      <li><a href="https://demo.sanctumboard.com">Live environment</a></li>
+      <li><a href="https://assess.sanctumboard.com" target="_blank" rel="noreferrer">AI governance assessment</a></li>
+      <li><a href="https://ai4boards.org" target="_blank" rel="noreferrer">AI4Boards community</a></li>
+      <li><a href="mailto:hello@sanctumboard.com">hello@sanctumboard.com</a></li>
+    </ul>
   </div>
-  <div class="footer__bottom">
-    <div class="container footer__bottom-inner">
-      <span>© 2026 SanctumBoard. All rights reserved.</span>
-      <span>Built in Australia for Australian boards.</span>
-    </div>
+  <div class="container footer__legal">
+    <p>© 2026 SanctumBoard · Pam drafts; named humans approve; the board retains decision authority.
+    SanctumBoard provides governance support and evidence — not legal advice or compliance determinations.</p>
   </div>
 </footer>
-
-<script>
-  // Sticky nav shadow
-  window.addEventListener('scroll', () => {
-    document.getElementById('nav').classList.toggle('nav--scrolled', window.scrollY > 20);
-  });
-
-  // Mobile menu
-  function toggleMenu() {
-    document.getElementById('navMobile').classList.toggle('nav__mobile--open');
-  }
-
-  // Demo form
-  function handleDemo(e) {
-    e.preventDefault();
-    e.target.style.display = 'none';
-    document.getElementById('demoSuccess').style.display = 'block';
-  }
-
-  // Intersection observer for fade-in
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in-view'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.card, .feature-card, .industry-card, .step').forEach(el => {
-    el.classList.add('observe');
-    observer.observe(el);
-  });
-</script>
 
 </body>
 </html>
