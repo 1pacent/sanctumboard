@@ -9,4 +9,7 @@ Static HTML + CSS (no build step). Deploys anywhere that serves files:
 Related properties:
 - Live product: https://demo.sanctumboard.com
 - AI governance assessment: https://assess.sanctumboard.com
-- Education community: https://ai4boards.org
+- Documentation: https://docs.sanctumboard.com
+
+The commercial arm is kept separate from the community: nothing on this site
+links to or mentions the community property.
