@@ -25,7 +25,7 @@
       <li><a href="#different">Why SanctumBoard</a></li>
       <li><a href="#pricing">Pricing</a></li>
     </ul>
-    <a class="btn btn--solid btn--small" href="https://demo.sanctumboard.com">See the demo</a>
+    <a class="btn btn--solid btn--small" href="https://demo.sanctumboard.com/start?trial=1">Start free</a>
   </div>
 </nav>
 
@@ -40,8 +40,8 @@
       And everything, from her first draft to your final signature, leaves <strong>proof you can share</strong>.
     </p>
     <div class="hero__ctas">
-      <a class="btn btn--solid" href="https://demo.sanctumboard.com">See it live →</a>
-      <a class="btn btn--ghost" href="https://assess.sanctumboard.com" target="_blank" rel="noreferrer">Take the AI governance assessment ↗</a>
+      <a class="btn btn--solid" href="https://demo.sanctumboard.com/start?trial=1">Start free — 30 days, no card →</a>
+      <a class="btn btn--ghost" href="https://demo.sanctumboard.com">See it live</a>
     </div>
     <p class="hero__promise">Nothing becomes a record without a named human approval — that is the architecture, not a policy.</p>
 
@@ -225,24 +225,31 @@
     <p class="eyebrow">Pricing</p>
     <h2>Employ a secretary, not a seat count.</h2>
     <p class="section__lead">Every plan includes unlimited board members — you’re employing Pam, not licensing logins.</p>
-    <div class="plans">
-      <div class="plan">
-        <h3>Solo</h3><p class="plan__price">A$99<span>/mo</span></p>
-        <p>For the director who is also the board. Your duty map, your records, your annual cycle — AI off.</p>
+
+    <!-- The trial, when it is actually open. Hidden until /api/plans says so,
+         because advertising a trial we are not running is a broken promise on
+         the first page somebody reads. -->
+    <div class="trialbar" id="trial-banner" hidden>
+      <div>
+        <b>Try the whole thing free for <span data-days>30</span> days.</b>
+        <span>The complete product and <span data-credits>1,000</span> AI credits. No credit card, nothing to cancel, and nothing is deleted when it ends.</span>
       </div>
-      <div class="plan">
-        <h3>Foundations</h3><p class="plan__price">A$199<span>/mo</span></p>
-        <p>The complete governance system, AI off. Records, obligations, threads and proof — on your terms.</p>
-      </div>
-      <div class="plan plan--feature">
-        <h3>AI Secretary</h3><p class="plan__price">A$499<span>/mo</span></p>
-        <p>Employ Pam end-to-end: the full cycle run, receipted, with every decision sealed by you.</p>
-      </div>
-      <div class="plan">
-        <h3>Passport</h3><p class="plan__price">+A$149<span>/mo</span></p>
-        <p>Externally verifiable adherence — share it with funders, insurers, banks and regulators.</p>
-      </div>
+      <a class="btn btn--solid btn--small" href="https://demo.sanctumboard.com/start?trial=1">Start free trial →</a>
     </div>
+
+    <div class="term-toggle" id="term-toggle" hidden>
+      <button type="button" data-term="month" class="termbtn termbtn--on" aria-pressed="true">Monthly</button>
+      <button type="button" data-term="year" class="termbtn" aria-pressed="false">Annual — save 10%</button>
+    </div>
+
+    <!-- Filled from demo.sanctumboard.com/api/plans, which reads the same
+         catalogue checkout charges from. Deliberately empty until it answers:
+         a number written here is a fourth price list waiting to happen. -->
+    <div class="plans" id="plans">
+      <div class="plan plan--loading"><h3>Loading plans…</h3></div>
+    </div>
+
+    <p class="section__note" id="pricing-note">Every plan includes unlimited board members. Prices in Australian dollars, excluding GST.</p>
     <p class="section__note">Advisory and accounting firms: run every board you serve from one console — talk to us about Fleet.</p>
   </div>
 </section>
@@ -294,5 +301,6 @@
   </div>
 </footer>
 
+<script src="pricing.js" defer></script>
 </body>
 </html>
