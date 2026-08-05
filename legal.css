@@ -1,0 +1,81 @@
+/* ============================================================
+   SANCTUMBOARD.COM — legal documents
+   Same design system as style.css. Optimised for reading a long
+   document and for finding one clause in it, because that is
+   what these pages are actually used for.
+   ============================================================ */
+
+.legal-hero { padding: 56px 0 34px; background:
+  radial-gradient(900px 380px at 80% -20%, var(--trust-soft) 0%, transparent 60%);
+  border-bottom: 1px solid var(--line);
+}
+.legal-hero h1 { font-size: clamp(30px, 4.4vw, 44px); }
+.legal-hero .meta { margin-top: 14px; font-size: 13.5px; color: var(--ink-soft); }
+.legal-hero .meta b { color: var(--ink); }
+
+/* Two columns on desktop: contents beside the document. On a phone the
+   contents collapse to the top, which is where they are useful anyway. */
+.legal-layout { display: grid; grid-template-columns: 232px 1fr; gap: 48px; align-items: start; padding: 44px 0 80px; }
+@media (max-width: 900px) { .legal-layout { grid-template-columns: 1fr; gap: 28px; } }
+
+.toc { position: sticky; top: 84px; font-size: 13.5px; }
+@media (max-width: 900px) { .toc { position: static; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; } }
+.toc p { font-size: 11.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 10px; }
+.toc ol { list-style: none; counter-reset: toc; }
+.toc li { counter-increment: toc; margin-bottom: 7px; }
+.toc a { text-decoration: none; color: var(--ink-soft); display: block; line-height: 1.4; }
+.toc a::before { content: counter(toc) ". "; color: var(--ink-faint); }
+.toc a:hover { color: var(--trust); }
+
+.doc { max-width: 720px; }
+.doc h2 { font-size: clamp(21px, 2.6vw, 26px); margin-top: 44px; scroll-margin-top: 84px; }
+.doc h2:first-of-type { margin-top: 0; }
+.doc h3 { font-size: 15.5px; margin-top: 26px; color: var(--trust-ink); }
+.doc p { font-size: 15.5px; color: var(--ink-soft); margin-top: 12px; }
+.doc p strong, .doc li strong { color: var(--ink); }
+.doc ul, .doc ol { margin: 12px 0 0 22px; }
+.doc li { font-size: 15.5px; color: var(--ink-soft); margin-bottom: 8px; }
+.doc a { color: var(--trust); }
+
+/* The plain-English gloss beside a clause. Deliberately quieter than the
+   clause itself — it explains the term, it is not a second version of it. */
+.plain { border-left: 3px solid var(--sky); background: var(--sky-soft); border-radius: 0 12px 12px 0;
+  padding: 14px 18px; margin-top: 16px; }
+.plain p { margin: 0; font-size: 14px; color: var(--trust-ink); }
+.plain p + p { margin-top: 8px; }
+.plain b { font-weight: 700; }
+
+/* A commitment we are making, rather than a right we are reserving. */
+.promise { border: 1px solid var(--assent); background: var(--assent-soft); border-radius: 14px;
+  padding: 16px 20px; margin-top: 18px; }
+.promise p { margin: 0; font-size: 14.5px; color: #0f5a3a; }
+
+/* Statutory rights we cannot exclude and are not trying to. */
+.statute { border: 1px solid var(--seal); background: var(--seal-soft); border-radius: 14px;
+  padding: 16px 20px; margin-top: 18px; }
+.statute p { margin: 0; font-size: 14.5px; color: #6b5222; }
+
+/* Sub-processor / residency tables. Wide content scrolls in its own box
+   rather than the page scrolling sideways on a phone. */
+.tablewrap { overflow-x: auto; margin-top: 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.doc table { border-collapse: collapse; width: 100%; min-width: 560px; }
+.doc th, .doc td { text-align: left; padding: 12px 16px; font-size: 13.5px; vertical-align: top; }
+.doc th { font-size: 11.5px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase;
+  color: var(--ink-faint); background: var(--ground); border-bottom: 1px solid var(--line); }
+.doc td { color: var(--ink-soft); border-bottom: 1px solid var(--line); }
+.doc tr:last-child td { border-bottom: 0; }
+.doc td b { color: var(--ink); }
+.pill { display: inline-block; font-size: 10.5px; font-weight: 700; letter-spacing: .05em;
+  text-transform: uppercase; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.pill--au { background: var(--assent-soft); color: var(--assent); }
+.pill--os { background: var(--seal-soft); color: var(--seal); }
+
+/* Anything still to be completed before this page goes live. Impossible to
+   miss on purpose — a placeholder that looks like prose is how a draft gets
+   published with [ABN] still in it. */
+.fillin { background: #fff4d6; border: 2px dashed #c99a1e; border-radius: 12px; padding: 14px 18px; margin-top: 18px; }
+.fillin p { margin: 0; font-size: 14px; color: #7a5a05; }
+.fillin b { color: #5c4300; }
+
+.legal-foot { border-top: 1px solid var(--line); margin-top: 48px; padding-top: 22px; }
+.legal-foot p { font-size: 13px; color: var(--ink-faint); }
