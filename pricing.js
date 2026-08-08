@@ -93,6 +93,49 @@
       card.appendChild(cr);
     }
 
+    // What the plan actually gives you.
+    //
+    // /api/plans has carried this since the ladder moved into the database and
+    // the page never rendered it, so the pricing section showed a price, a
+    // blurb and a credit count while the in-product billing page — which reads
+    // the very same rows — laid the tiers out properly. The one page a buyer
+    // reads before deciding was the least informative view of the product.
+    //
+    // Built from the API rather than written here, for the reason the comment
+    // above the plans container gives: a feature list typed into this file is
+    // a second catalogue, and it starts drifting the day it is written.
+    if (p.features && p.features.length) {
+      var ul = document.createElement("ul");
+      ul.className = "plan__features";
+      p.features.forEach(function (f) {
+        var li = document.createElement("li");
+        // A priced add-on is not included, and a tick beside it would say it
+        // is. Sector compliance modules cost A$299/month on top of the plan.
+        var isAddon = f.addonPriceAud != null;
+        li.className = isAddon ? "plan__feature plan__feature--addon" : "plan__feature";
+
+        var mark = document.createElement("span");
+        mark.className = "plan__tick";
+        mark.setAttribute("aria-hidden", "true");
+        mark.textContent = isAddon ? "+" : "\u2713";
+        li.appendChild(mark);
+
+        // textContent throughout: these strings come from the catalogue, and
+        // innerHTML here would put a database field into the page as markup.
+        li.appendChild(document.createTextNode(f.displayName));
+
+        if (isAddon) {
+          var note = document.createElement("span");
+          note.className = "plan__addon";
+          note.textContent = " — add-on, " + money(f.addonPriceAud) + "/mo ex GST";
+          li.appendChild(note);
+        }
+        if (f.description) li.title = f.description;
+        ul.appendChild(li);
+      });
+      card.appendChild(ul);
+    }
+
     var cta = document.createElement("a");
     cta.className = "btn btn--small " + (p.key === "professional" ? "btn--solid" : "btn--ghost");
     cta.style.marginTop = "14px";
