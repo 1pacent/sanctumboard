@@ -122,7 +122,7 @@
 
         // textContent throughout: these strings come from the catalogue, and
         // innerHTML here would put a database field into the page as markup.
-        li.appendChild(document.createTextNode(f.displayName));
+        li.appendChild(document.createTextNode(f.name));
 
         if (isAddon) {
           var note = document.createElement("span");
