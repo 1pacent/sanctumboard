@@ -114,8 +114,38 @@
     return card;
   }
 
+  /**
+   * The hero and nav buttons, which are the loudest promise on the page.
+   *
+   * They were written into the HTML as "Start free — 30 days, no card" and
+   * gated on nothing, so they went on saying it while trials_open was false
+   * and the signup they led to refused. The trial bar was gated all along —
+   * fixing only the bar still left the biggest button on the page advertising
+   * a trial that did not exist.
+   *
+   * So the static HTML now says the SAFE thing, and this upgrades it once the
+   * catalogue confirms a trial is running. That ordering is the point: it is
+   * called BEFORE the empty-catalogue return below, so a failed or blocked
+   * fetch leaves honest wording rather than an unkeepable promise. A promise
+   * should have to be earned by a live answer, not merely survive one.
+   */
+  function applyTrialCtas(data) {
+    var trial = data && data.trial;
+    var ctas = document.querySelectorAll("[data-cta-trial]");
+    Array.prototype.forEach.call(ctas, function (a) {
+      if (trial && trial.open) {
+        a.textContent = "Start free — " + trial.days + " days, no card →";
+        a.href = START + "?trial=1";
+      } else if (data && !data.signupsOpen) {
+        a.textContent = "Request early access →";
+        a.href = START;
+      }
+    });
+  }
+
   function render(data) {
     var plans = (data && data.plans) || [];
+    applyTrialCtas(data);
     if (!plans.length) return fallback();
 
     var mount = el("plans");

@@ -6,6 +6,24 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* The `hidden` attribute must actually hide things.
+   ------------------------------------------------------------
+   The browser's own [hidden] { display: none } is a zero-specificity user-agent
+   rule, so ANY class that sets display beats it. Several elements here are
+   drawn hidden and revealed by pricing.js once /api/plans answers, and two of
+   them — .trialbar and .term-toggle — set display in their own class. Both were
+   therefore visible always.
+
+   For .trialbar that was not cosmetic. It advertised "free for 30 days, no
+   credit card" to every visitor while trials_open was false, and its button led
+   to a signup that refuses — the exact broken promise that the markup comment
+   and the pricing.js gate were both written to prevent. Neither was wrong; this
+   line was missing underneath them.
+
+   !important because the whole point is to outrank a class that sets display.
+   With this here, `hidden` can be trusted from now on. */
+[hidden] { display: none !important; }
+
 :root {
   --ground:      #f4f7fb;
   --surface:     #ffffff;

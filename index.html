@@ -25,7 +25,9 @@
       <li><a href="#different">Why SanctumBoard</a></li>
       <li><a href="#pricing">Pricing</a></li>
     </ul>
-    <a class="btn btn--solid btn--small" href="https://demo.sanctumboard.com/start?trial=1">Start free</a>
+    <!-- Safe by default: no trial is promised here. pricing.js upgrades this to
+         the trial wording only once /api/plans confirms one is running. -->
+    <a class="btn btn--solid btn--small" data-cta-trial href="https://demo.sanctumboard.com/start">Get started</a>
   </div>
 </nav>
 
@@ -40,7 +42,7 @@
       And everything, from her first draft to your final signature, leaves <strong>proof you can share</strong>.
     </p>
     <div class="hero__ctas">
-      <a class="btn btn--solid" href="https://demo.sanctumboard.com/start?trial=1">Start free — 30 days, no card →</a>
+      <a class="btn btn--solid" data-cta-trial href="https://demo.sanctumboard.com/start">Get started →</a>
       <a class="btn btn--ghost" href="https://demo.sanctumboard.com">See it live</a>
     </div>
     <p class="hero__promise">Nothing becomes a record without a named human approval — that is the architecture, not a policy.</p>
